@@ -11,6 +11,13 @@ class Ventana2 : AppCompatActivity() {
         binding=ActivityVentana2Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        var nom=intent.getStringExtra("nombre")
+        var eda=intent.getStringExtra("edad")
+        binding.txtcaja2.text=nom
+        binding.txtcaja.text=eda
+        binding.btnVolver.setOnClickListener{
+            finish()
+        }
 
     }
 }
